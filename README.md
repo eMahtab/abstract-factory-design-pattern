@@ -87,6 +87,32 @@ public class RoomFactory {
 	}
 
 }
+
+public enum Meal {
+     BREAKFAST, LUNCH, DINNER;
+}
+
+public class StandardBreakfast extends Food {
+
+}
+public class StandardLunch extends Food {
+
+}
+public class StandardDinner extends Food {
+
+}
+public class PremiumBreakfast extends Food {
+
+}
+public class PremiumLunch extends Food {
+
+}
+public class PremiumDinner extends Food {
+
+}
+
+
+
 ```
 
 
