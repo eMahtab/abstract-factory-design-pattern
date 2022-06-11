@@ -82,7 +82,7 @@ public class RoomFactory {
 		       room = new PremiumKingBedSeaViewRoom();
 		   }
 		}
-	     }
+	    }
 	   return room;	
 	}
 
