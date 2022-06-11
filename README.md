@@ -154,3 +154,27 @@ public class Main {
 The problem with the above implementation is we want to restrict packaging the Premium food types with the Standard Room types.
 But above implementation allows combining the Standard room types with Premium food types.
 
+### AbstractFactory pattern in the use
+
+```java
+public abstract class PackageFactory {
+      public abstract Room getRoom(BedType bedType, View view);
+      public abstract Food getFood(Meal meal);
+	
+      public static PackageFactory getFactory(Package packageType) {
+	  PackageFactory packageFactory = null;
+	  switch(packageType) {
+            case STANDARD : packageFactory = new StandardPackage();
+	    case PREMIUM : packageFactory = new PremiumPackage();
+	    default : try {
+			throw new Exception("No factory for " + packageType);
+		      } catch (Exception e) {
+			e.printStackTrace();
+		      }		  
+	  }
+	 return packageFactory;
+     } 
+}
+
+```
+
