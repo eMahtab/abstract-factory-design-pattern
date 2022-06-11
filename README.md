@@ -111,7 +111,29 @@ public class PremiumDinner extends Food {
 
 }
 
-
+public class FoodFactory {
+	public Food getFood(Package packageType, Meal meal) {
+		Food food = null;
+		if (packageType == Package.STANDARD) {
+			if (meal == Meal.BREAKFAST) {
+				food = new StandardBreakfast();
+			} else if (meal == Meal.LUNCH) {
+				food = new StandardLunch();
+			} else if (meal == Meal.DINNER) {
+				food = new StandardDinner();
+			}
+		} else if(packageType == Package.PREMIUM) {
+			if (meal == Meal.BREAKFAST) {
+				food = new PremiumBreakfast();
+			} else if (meal == Meal.LUNCH) {
+				food = new PremiumLunch();
+			} else if (meal == Meal.DINNER) {
+				food = new PremiumDinner();
+			}
+		}
+		return food;
+	}
+}
 
 ```
 
