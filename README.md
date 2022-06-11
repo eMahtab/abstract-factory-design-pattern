@@ -5,6 +5,10 @@ Abstract Factory is a creational design pattern that lets you produce families o
 Suppose you want to support creation of Standard and Premium hotel rooms, along with that you also want to allow creation of Standard and Premium food.
 
 ```java
+public enum Package {
+	STANDARD, PREMIUM;
+}
+
 public class Room {
 	
 }
