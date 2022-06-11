@@ -211,5 +211,39 @@ public class StandardPackage extends PackageFactory{
 }
 
 
+public class PremiumPackage extends PackageFactory{
+    @Override
+    public Room getRoom(BedType bedType, View view) {
+      Room room = null;
+      if (bedType == BedType.SINGLE_BED) {
+	 if (view == View.CITY_VIEW) {
+	    room = new PremiumCityViewRoom();
+	 } else if(view == View.SEA_VIEW) {
+	    room = new PremiumSeaViewRoom();
+	 }
+      } else if(bedType == BedType.KING_BED) {
+	 if (view == View.CITY_VIEW) {
+	    room = new PremiumKingBedCityViewRoom();
+	 } else if(view == View.SEA_VIEW) {
+	    room = new PremiumKingBedSeaViewRoom();
+	 }
+      }
+      return room;	
+     }
+
+     @Override
+     public Food getFood(Meal meal) {
+	Food food = null;
+	if (meal == Meal.BREAKFAST) {
+	   food = new PremiumBreakfast();
+	} else if (meal == Meal.LUNCH) {
+	   food = new PremiumLunch();
+	} else if (meal == Meal.DINNER) {
+	   food = new PremiumDinner();
+	}
+       return food;
+     }
+}
+
 ```
 
