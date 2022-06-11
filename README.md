@@ -134,8 +134,8 @@ public class FoodFactory {
 	  } else if (meal == Meal.DINNER) {
 	      food = new PremiumDinner();
 	  }
-	}
-	return food;
+       }
+      return food;
     }
 }
 
