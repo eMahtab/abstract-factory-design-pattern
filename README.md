@@ -258,3 +258,6 @@ public class Main {
 ```
 
 With the code implementing the Abstract Factory pattern , we have taken out the Package type from the getRoom() and getFood() method signature.
+
+With this the factory will always return the appropriate Room and Food types, according to the package, 
+and mismatch of the classes (Standard room with Premium Food types and vice versa) will not happen. 
