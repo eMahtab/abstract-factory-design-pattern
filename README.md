@@ -151,4 +151,6 @@ public class Main {
 
 ```
 
+The problem with the above implementation is we want to restrict packaging the Premium food types with the Standard Room types.
+But above implementation allows combining the Standard room types with Premium food types.
 
