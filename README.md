@@ -176,5 +176,40 @@ public abstract class PackageFactory {
      } 
 }
 
+
+public class StandardPackage extends PackageFactory{
+      
+      public Room getRoom(BedType bedType, View view) {
+	  Room room = null;
+	  if (bedType == BedType.SINGLE_BED) {
+	      if (view == View.CITY_VIEW) {
+		  room = new StandardCityViewRoom();
+	      } else if(view == View.SEA_VIEW) {
+	          room = new StandardSeaViewRoom();
+	      }
+	  } else if(bedType == BedType.KING_BED) {
+	      if (view == View.CITY_VIEW) {
+		  room = new StandardKingBedCityViewRoom();
+	      } else if(view == View.SEA_VIEW) {
+		  room = new StandardKingBedSeaViewRoom();
+	      }
+	  }
+	 return room;
+      }
+
+      public Food getFood(Meal meal) {
+	  Food food = null;
+	  if (meal == Meal.BREAKFAST) {
+	     food = new StandardBreakfast();
+	  } else if (meal == Meal.LUNCH) {
+	     food = new StandardLunch();
+	  } else if (meal == Meal.DINNER) {
+	     food = new StandardDinner();
+	  }
+	 return food;
+      }
+}
+
+
 ```
 
