@@ -139,6 +139,16 @@ public class FoodFactory {
     }
 }
 
+public class Main {
+    public static void main(String[] args) {
+	RoomFactory roomFactory = new RoomFactory();
+	FoodFactory foodFactory = new FoodFactory();
+		
+	Room room = roomFactory.getRoom(Package.STANDARD, BedType.SINGLE_BED, View.SEA_VIEW);
+	Food food = foodFactory.getFood(Package.PREMIUM, Meal.LUNCH);	
+    }
+}
+
 ```
 
 
