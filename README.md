@@ -48,6 +48,45 @@ public enum BedType {
 public enum View {
      SEA_VIEW, CITY_VIEW;
 }
+
+public class RoomFactory {
+	
+    public Room getRoom(Package packageType , BedType bedType, View view) {
+	  Room room = null;
+		
+	  if (packageType == Package.STANDARD) {
+	      if (bedType == BedType.SINGLE_BED) {
+		 if (view == View.CITY_VIEW) {
+		     room = new StandardCityViewRoom();
+		  } else if(view == View.SEA_VIEW) {
+		     return new StandardSeaViewRoom();
+		  }
+	      } else if(bedType == BedType.KING_BED) {
+	         if (view == View.CITY_VIEW) {
+		     return new StandardKingBedCityViewRoom();
+		 } else if(view == View.SEA_VIEW) {
+		     return new StandardKingBedSeaViewRoom();
+		 }
+	      }
+	   } else if (packageType == Package.PREMIUM) {
+	       if (bedType == BedType.SINGLE_BED) {
+		   if (view == View.CITY_VIEW) {
+		       room = new PremiumCityViewRoom();
+		   } else if(view == View.SEA_VIEW) {
+		       return new PremiumSeaViewRoom();
+		   }
+		} else if(bedType == BedType.KING_BED) {
+		   if (view == View.CITY_VIEW) {
+		       return new PremiumKingBedCityViewRoom();
+		   } else if(view == View.SEA_VIEW) {
+		       return new PremiumKingBedSeaViewRoom();
+		   }
+		}
+	     }
+	   return room;	
+	}
+
+}
 ```
 
 
