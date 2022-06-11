@@ -40,6 +40,14 @@ public class PremiumKingBedCityViewRoom extends Room {
 public class PremiumKingBedSeaViewRoom extends Room {
 
 }
+
+public enum BedType {
+     KING_BED, SINGLE_BED;
+}
+
+public enum View {
+     SEA_VIEW, CITY_VIEW;
+}
 ```
 
 
