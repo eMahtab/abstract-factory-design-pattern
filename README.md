@@ -59,13 +59,13 @@ public class RoomFactory {
 		 if (view == View.CITY_VIEW) {
 		     room = new StandardCityViewRoom();
 		  } else if(view == View.SEA_VIEW) {
-		     return new StandardSeaViewRoom();
+		     room = new StandardSeaViewRoom();
 		  }
 	      } else if(bedType == BedType.KING_BED) {
 	         if (view == View.CITY_VIEW) {
-		     return new StandardKingBedCityViewRoom();
+		     room = new StandardKingBedCityViewRoom();
 		 } else if(view == View.SEA_VIEW) {
-		     return new StandardKingBedSeaViewRoom();
+		     room = new StandardKingBedSeaViewRoom();
 		 }
 	      }
 	   } else if (packageType == Package.PREMIUM) {
@@ -73,13 +73,13 @@ public class RoomFactory {
 		   if (view == View.CITY_VIEW) {
 		       room = new PremiumCityViewRoom();
 		   } else if(view == View.SEA_VIEW) {
-		       return new PremiumSeaViewRoom();
+		       room = new PremiumSeaViewRoom();
 		   }
 		} else if(bedType == BedType.KING_BED) {
 		   if (view == View.CITY_VIEW) {
-		       return new PremiumKingBedCityViewRoom();
+		       room = new PremiumKingBedCityViewRoom();
 		   } else if(view == View.SEA_VIEW) {
-		       return new PremiumKingBedSeaViewRoom();
+		       room = new PremiumKingBedSeaViewRoom();
 		   }
 		}
 	     }
