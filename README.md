@@ -245,5 +245,15 @@ public class PremiumPackage extends PackageFactory{
      }
 }
 
+
+public class Main {
+    public static void main(String[] args) {
+	PackageFactory factory = PackageFactory.getFactory(Package.STANDARD);
+		
+	Room room = factory.getRoom(BedType.SINGLE_BED, View.SEA_VIEW);
+	Food food = factory.getFood(Meal.LUNCH);		
+    }
+}
+
 ```
 
